@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const assert_1 = __importDefault(require("assert"));
 function endZeros(a) {
     let count = 0;
+    if (a === 0) {
+        return 1;
+    }
     while (a % 10 === 0) {
-        if (a === 0) {
-            return 1;
-        }
         count++;
         a = Math.floor(a / 10);
     }
